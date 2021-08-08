@@ -1,0 +1,126 @@
+<!DOCTYPE>
+<html>
+ <head>
+  <title>자바스크립트 첫강의</title>
+     <link rel="stylesheet" href="main.css">
+     
+ </head>
+ <body>   
+  <h2 id = "hello">안녕하세요</h2>
+  <h2 id = "hi">올때 메로나</h2>
+  <h2 id = "close">X</h2>
+     
+  <div class = "alert-box" id ="alert">Alert 박스</div>
+   <button onclick ="openclose('id')">아이디</button>
+   <button onclick ="openclose('password')">비밀번호</button>   
+   
+     <script>
+        //open이라는 특정키워드는 사용하지 않기.
+     function open1(구멍)
+     {
+     document.getElementById('alert').style.display = 구멍;     
+     }
+     function close1()
+     {
+     document.getElementById('alert').style.display = 'none';    
+     }
+
+     function openclose(flag)
+         {
+             if (flag == 'id'){
+         document.getElementById('hi').innerHTML = "아이디를 입력하셈";
+             }
+             else {
+         document.getElementById('hi').innerHTML = "비밀번호를 입력하셈";
+                 
+             }
+         }
+     function plus(a,b)
+         {
+          return a+b;
+         }
+        //이벤트 리스너 
+        document.getElementById('close').addEventListener('click',function(){
+          document.getElementById('hi').style.display = 'none';  
+        })
+
+       //셀렉터 selector라고 지칭한다.
+       //$ 제이쿼리라고 할 수 있다.
+       //document.getElementById('hello').innerHTML = '안녕';
+       //document.getElementById('hi').innerHTML = '때 밤바';
+       //document.getElementById('hello').style = 'font-size : 30px'
+    
+        //이벤트 리스트 해보기. 
+        
+         //제이쿼리 사용해보기.(JQeury) 
+     </script>
+
+       <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+       //여기에서 쓰고 이거 밑으로 제이쿼리를 사용한다.
+     </script> 
+     
+     <script>
+         
+         // 이런식으로 사용할 수 있다.document.querySelector('#hi')
+        $('#hi').html('안녕');
+        $('#hi').text('안녕하세요');
+        $('#hi').html('안녕'); // 출력방법.
+        $('#hi').css('color','red'); // 출력방법.
+        $('#hi').attr('src','red'); // 원하는 속성 바꿀 수 있다..
+         
+        $('#hi').css('color','red'); // 출력방법.
+         
+        $('#hi').attr('class','yellow-bg');
+
+
+     </script>
+     
+     
+     
+     
+     <script>
+         // 캐릭터 마다 .
+         // 이렇게 하기 귀찮다 -> 클래스를 만들자.
+//         var nunu = {
+//             q : 'consume'
+//             w : 'snowball'
+//         }
+//         
+//         
+//         var garen = {
+//             q : 'strike'
+//             w : 'courage'
+//         }
+//         
+         function 롤클래스(q,w,e,r)
+         {
+             this.q = q;
+             this.w = w;
+             this.e = e;
+             this.r = r;
+         }
+         
+         var nunu = new 롤클래스 ('consume','snowball','','');
+         var garen = new 롤클래스 ('strike','courage','','');
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+     </script>
+     
+     
+     
+     
+     
+     
+     
+     
+</body>
+</html>

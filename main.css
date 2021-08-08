@@ -1,0 +1,13 @@
+
+.alert-box {
+    background: #9191ed;
+    color :blue;
+    padding: 20px;
+    display: none;
+}
+
+
+
+.yellow-bg{
+    background:yellow;
+}
